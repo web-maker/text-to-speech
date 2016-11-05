@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IBM Watson text-to-speech demo</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/custom.css">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="https://www.ibm.com/watson/developercloud/text-to-speech.html">Watson Text to Speech</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <h3>Please fill the form below:</h3>
+        <form method="post" action="base.php" id="text-form">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label for="filename" class="control-label">Save as (filename):</label>
+                        <input type="text" id="filename" name="filename" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="voice">Select voice:</label>
+                        <select id="voice" name="voice" class="form-control">
+                            <option>de-DE_BirgitVoice</option>
+                            <option>de-DE_DieterVoice</option>
+                            <option>en-GB_KateVoice</option>
+                            <option>en-US_AllisonVoice</option>
+                            <option>en-US_LisaVoice</option>
+                            <option selected>en-US_MichaelVoice</option>
+                            <option>es-ES_LauraVoice</option>
+                            <option>es-ES_EnriqueVoice</option>
+                            <option>es-US_SofiaVoice</option>
+                            <option>fr-FR_ReneeVoice</option>
+                            <option>it-IT_FrancescaVoice</option>
+                            <option>ja-JP_EmiVoice</option>
+                            <option>pt-BR_IsabelaVoice</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="text">Text (required):</label>
+                        <textarea id="text" name="text" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="progress hidden">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <audio controls id="audio-player" preload="auto">
+                            <source src="" type="audio/ogg">
+                        </audio>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                    </div>
+                    <div class="form-group">
+                        <div id="result"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>

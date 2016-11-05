@@ -1,0 +1,21 @@
+{
+  "name": "IBM Watson Text to Speech PHP Demo",
+  "authors": [
+    "Alex Stovbur <alexstovbur@redwerk.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}
